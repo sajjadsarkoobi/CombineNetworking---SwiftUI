@@ -11,7 +11,7 @@ import SwiftUI
 struct SampleCombineNetworkingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProductView()
         }
     }
 }
