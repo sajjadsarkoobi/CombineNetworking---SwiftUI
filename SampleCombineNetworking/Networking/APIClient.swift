@@ -104,6 +104,13 @@ extension Request {
         request.httpMethod = method.rawValue
         request.httpBody = requestBodyFrom(params: body)
         request.allHTTPHeaderFields = headers
+        
+        ///Set your Common Headers here
+        ///Like: api secret key for authorization header
+        ///Or set your content type
+        //request.setValue("Your API Token key", forHTTPHeaderField: HTTPHeaderField.authorization.rawValue)
+        request.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
+      
         return request
     }
 }

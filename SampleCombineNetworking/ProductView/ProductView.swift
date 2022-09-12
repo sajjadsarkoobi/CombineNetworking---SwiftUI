@@ -20,6 +20,7 @@ struct ProductView: View {
                     
                     HStack {
                         TextField("Add product", text: $newProduct)
+                            .textFieldStyle(.plain)
                         Button("Add") {
                             viewModel.addProduct(productName: newProduct)
                         }
@@ -32,16 +33,13 @@ struct ProductView: View {
                     }
                 }
             }
-            
             .navigationTitle("Products")
         }
         .alert("Product Added", isPresented: $presentAlert, actions: {
             Button("OK", role: .cancel) { }
         })
         .onChange(of: viewModel.productAdded, perform: { newValue in
-            if newValue {
                 presentAlert.toggle()
-            }
         })
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {

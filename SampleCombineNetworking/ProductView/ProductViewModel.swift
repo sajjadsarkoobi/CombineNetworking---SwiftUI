@@ -19,9 +19,8 @@ class ProductViewModel: ObservableObject {
         APIClient.dispatch(
             APIRouter.GetProducts(queryParams:
                                     APIParameters.ProductParams(skip: 1, limit: 10)))
-        .sink { _ in
-            
-        } receiveValue: { [weak self] products in
+        .sink { _ in }
+        receiveValue: { [weak self] products in
             self?.products = products.products
         }.store(in: &cancelable)
     }
@@ -35,7 +34,7 @@ class ProductViewModel: ObservableObject {
         .sink { _ in
         } receiveValue: { [weak self] product in
             Log.info("Added product-> \(product.id)")
-            self?.productAdded = true
+            self?.productAdded.toggle()
         }.store(in: &cancelable)
     }
 }
