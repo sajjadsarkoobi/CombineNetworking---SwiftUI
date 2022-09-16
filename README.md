@@ -19,7 +19,7 @@ Based APIClient class written by [Daniel Bernal](https://danielbernal.co/writing
 - Native URLsession with Publisher
 - Network Request on background thread
 - Response on main thread
-- Log Network activiy in console
+- Log Network activity in console
 - APIParams as Struct
 - Supporting GET, POST, PUT, DELETE as HTTPMethods
 
@@ -54,7 +54,7 @@ Sample GET request with query params:
         var method: HTTPMethod = .get
         var queryParams: [String : Any]?
         init(queryParams: APIParameters.ProductParams) {
-            self.queryParams = queryParams.convertToDict()
+            self.queryParams = queryParams.asDictionary
         }
     }
 ```
@@ -67,7 +67,7 @@ Sample POST request with body params:
         var method: HTTPMethod = .post
         var body: [String : Any]?
         init(body: APIParameters.AddProductParams) {
-            self.body = body.convertToDict()
+            self.body = body.asDictionary
         }
     }
 ```
