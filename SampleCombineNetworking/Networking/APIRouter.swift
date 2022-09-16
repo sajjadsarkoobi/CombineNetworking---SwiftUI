@@ -16,7 +16,7 @@ class APIRouter {
         var method: HTTPMethod = .get
         var queryParams: [String : Any]?
         init(queryParams: APIParameters.ProductParams) {
-            self.queryParams = queryParams.convertToDict()
+            self.queryParams = queryParams.asDictionary
         }
     }
     
@@ -26,7 +26,7 @@ class APIRouter {
         var method: HTTPMethod = .post
         var body: [String : Any]?
         init(body: APIParameters.AddProductParams) {
-            self.body = body.convertToDict()
+            self.body = body.asDictionary
         }
     }
 }
