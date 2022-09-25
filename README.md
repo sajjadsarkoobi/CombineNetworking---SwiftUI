@@ -5,6 +5,12 @@ This project is a generic networking layer using `combine` and sample code in Sw
 Based APIClient class written by [Daniel Bernal](https://danielbernal.co/writing-a-networking-library-with-combine-codable-and-swift-5/), I expand his work. Thanks to him :)
 
 
+### Check it on my Youtube Channel [SwiftAcademy](https://youtu.be/_q_HFGfhpEI):
+<div align="left">
+      <a href="https://youtu.be/_q_HFGfhpEI">
+         <img src="https://img.youtube.com/vi/_q_HFGfhpEI/0.jpg" style="width:100%;">
+      </a>
+</div>
 
 
 ## Main classes
